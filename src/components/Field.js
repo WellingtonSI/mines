@@ -16,7 +16,7 @@ export default props => {
     if(!opened && !exploded) styleField.push(styles.regular)
 
     let color = null
-    if(nearMines >0 ){
+    if(nearMines > 0 ){
         if(nearMines == 1) color= '#2A28D7'
         if(nearMines == 2) color= '#2B520F'
         if(nearMines > 2 && nearMines < 6) color= '#F9060A'
