@@ -5,7 +5,8 @@ import {
     Text,
     TouchableOpacity,
     Modal
-} from 'react-native'
+} from 'react-native';
+import ButtonLevel from './ButtonLevel';
 
 export default props => {
     return (
@@ -14,7 +15,10 @@ export default props => {
             <View style={styles.frame}>
                 <View style={styles.container}>
                     <Text style={styles.title}>Selecione o Nível</Text>
-                    <TouchableOpacity 
+                    <ButtonLevel onClick={()=> props.onLevelSelected(0.1)} Easy/>
+                    <ButtonLevel onClick={()=> props.onLevelSelected(0.2)} Normal/>
+                    <ButtonLevel onClick={()=> props.onLevelSelected(0.3)} Hard/>
+                    {/* <TouchableOpacity 
                         style={[styles.button, styles.bgEasy]} onPress={()=> props.onLevelSelected(0.1)}>
                         <Text style={styles.buttonLavel}>Fácil</Text>
                     </TouchableOpacity>
@@ -25,7 +29,7 @@ export default props => {
                     <TouchableOpacity 
                         style={[styles.button, styles.bgHard]} onPress={()=> props.onLevelSelected(0.3)}>
                         <Text style={styles.buttonLavel}>Difícil</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
             </View>
             
