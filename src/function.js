@@ -52,11 +52,13 @@ const getNeighbors = (board, row, column) => {
     rows.forEach(r => {
         columns.forEach( c => {
             const diferent = r !== row || c !== column
-            const validRow  = r>= 0 && r < board[0].length
+            const validRow  = r>= 0 && r < board.length
             const validColumn = c >= 0 && c < board[0].length
+            
             if(diferent && validRow && validColumn){
                 neighbors.push(board[r][c])
             }
+            
         })
     })
 
@@ -69,12 +71,14 @@ const safeNeighborhood = (board, row, column) => {
 } 
 
 const openField = (board, row, column) => {
+    
     const field = board[row][column]
     if(!field.opened){
         field.opened = true
         if(field.mined){
             field.exploded = true
         } else if (safeNeighborhood(board, row, column)){
+           
             getNeighbors(board, row, column)
                 .forEach(n => openField(board, n.row,n.column))
         }else {

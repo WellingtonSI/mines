@@ -3,7 +3,6 @@ import {
     View,
     StyleSheet,
     Text,
-    TouchableOpacity,
     Modal
 } from 'react-native';
 import ButtonLevel from './ButtonLevel';
@@ -41,23 +40,5 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 30,
         fontWeight: 'bold',
-    },
-    button: {
-        marginTop: 10,
-        padding: 5,
-    },
-    buttonLabel: {
-        fontSize: 20,
-        color: '#EEE',
-        fontWeight: 'bold',
-    },
-    bgEasy: {
-        backgroundColor: '#49b65d'
-    },
-    bgNormal:{
-        backgroundColor: '#2765F7'
-    },
-    bgHard: {
-        backgroundColor: '#F26337'
-    }
+    }, 
 })
